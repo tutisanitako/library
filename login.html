@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Libraroom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Libraroom Logo" width="190" height="80" />
+          </a>
+        </div>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">Borrow</a></li>
+            <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+            <li><a href="#" class="nav-link">Services</a></li>
+            <li><a href="#" class="nav-link">About us</a></li>
+          </ul>
+        </nav>
+
+        <div class="search-container">
+          <div class="search-options">
+            <select>
+              <option value="catalog">Catalog</option>
+              <option value="calendar">Calendar</option>
+              <option value="website">Website</option>
+            </select>
+          </div>
+          <input type="text" id="search-bar" placeholder="Search..." />
+          <button id="search-btn">Search</button>
+        </div>
+
+        <div class="buttons">
+          <!-- <a href="login.html" class="btn btn-primary">Login</a> -->
+          <a href="signup.html" class="btn btn-warning">Sign-up</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="login-container">
+      <h1 class="text-center">Login</h1>
+      <div class="form-container">
+        <form id="submitForm" action="/login" method="post">
+          <input
+            type="hidden"
+            name="_csrf"
+            value="7635eb83-1f95-4b32-8788-abec2724a9a4"
+          />
+          <div class="form-group required">
+            <label for="username">Username / Email</label>
+            <input
+              type="text"
+              class="form-control text-lowercase"
+              id="username"
+              required
+              name="username"
+              value=""
+            />
+          </div>
+          <div class="form-group required">
+            <label class="d-flex flex-row align-items-center" for="password"
+              >Password
+              <a class="ml-auto border-link small-xl" href="/forget-password"
+                >Forget?</a
+              ></label
+            >
+            <input
+              type="password"
+              class="form-control"
+              required
+              id="password"
+              name="password"
+              value=""
+            />
+          </div>
+          <div class="form-group mt-4 mb-4">
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="remember-me"
+                name="remember-me"
+              />
+              <label class="custom-control-label" for="remember-me"
+                >Remember me?</label
+              >
+            </div>
+          </div>
+          <div class="form-group pt-1">
+            <button class="btn btn-primary btn-block" type="submit">
+              Log In
+            </button>
+          </div>
+        </form>
+        <p class="small-xl pt-3 text-center">
+          <span class="text-muted">Not a member?</span>
+          <a href="/signup">Sign up</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #333;
+        color: #fff;
+        font-size: 1.1em;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .header {
+        background-color: #343a40;
+        padding: 15px 0;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo img {
+        width: 190px;
+        height: 80px;
+        object-fit: contain;
+      }
+
+      .nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+      }
+
+      .buttons .btn {
+        margin-left: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .btn-warning {
+        background-color: #ffc107;
+        color: #343a40;
+      }
+
+      .search-container {
+        display: flex;
+        align-items: center;
+        position: relative; /* Add position relative for absolute positioning */
+      }
+
+      .search-options {
+        position: absolute;
+        left: 0;
+      }
+
+      #search-bar {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px; /* Add rounded corners */
+      }
+
+      #search-btn {
+        padding: 8px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px; /* Add rounded corners */
+      }
+
+      .login-container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: black;
+      }
+
+      .form-container {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        color: black;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+      }
+
+      .custom-checkbox {
+        display: flex;
+        align-items: center;
+      }
+
+      .forget-link {
+        margin-left: auto;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .btn-warning {
+        background-color: #ffc107;
+        color: #343a40;
+      }
+
+      .btn-block {
+        width: 100%;
+      }
+
+      .small-xl {
+        font-size: 14px;
+      }
+
+      .text-muted {
+        color: #6c757d;
+      }
+    </style>
+  </body>
+</html>
