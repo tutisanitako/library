@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="logocontainer">
         <div class="logo">
           <a href="home.html">
             <img
@@ -30,12 +30,20 @@
             <li class="dropdown">
               <a href="#" class="nav-link">
                 Catalog
-                <svg class="dropdown-icon" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 9.707L2.646 3.354 1.354 4.646 9 12.293 16.646 4.646 15.354 3.354z" fill="currentColor"></path>
+                <svg
+                  class="dropdown-icon"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9 9.707L2.646 3.354 1.354 4.646 9 12.293 16.646 4.646 15.354 3.354z"
+                    fill="currentColor"
+                  ></path>
                 </svg>
               </a>
-              
-              
+
               <div class="dropdown-content">
                 <a href="#">Books</a>
                 <a href="#">E-books</a>
@@ -92,32 +100,103 @@
       </div>
     </header>
 
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="assets/carousel/img1.jpg" />
+        <div class="text-container">
+          <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <img src="assets/carousel/img2.jpg"/>
+        <div class="text-container">
+          <p class="event-description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <img src="assets/carousel/img3.jpg"/>
+        <div class="text-container">
+          <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+    <br />
+
     <section id="trending-books" class="section">
-      <div class="container">
+      <div class="section-names">
         <h2>Trending</h2>
       </div>
     </section>
 
-    <section id="latest-books" class="section">
-      <div class="container">
-        <h2>Latest Books</h2>
+    <section id="book-section" class="section">
+      <div class="books-section">
+        <div class="book-container">
+          <div class="arrow-container">
+            <button class="arrow right-arrow">
+              <svg
+                width="34"
+                height="172"
+                viewBox="0 0 34 172"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32.9091 1L2 86L32.9091 171"
+                  stroke="#999999"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="books-container">
+            <div class="books"></div>
+          </div>
+          <div class="arrow-container">
+            <button class="arrow left-arrow">
+              <svg
+                width="34"
+                height="172"
+                viewBox="0 0 34 172"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.09091 171L32 86L1.09092 1"
+                  stroke="#999999"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="mainstream-books" class="section">
-      <div class="container">
+    <section id="latest-books" class="section">
+      <div class="section-names">
+        <h2>Latest Books</h2>
+      </div>
+    </section>    
+
+    <section id="authors" class="section">
+      <div class="section-names">
         <h2>Authors</h2>
       </div>
     </section>
 
-
-
     <footer id="main-footer">
-      <div class="container">
+      <div class="footcontainer">
         <p>&copy; 2023 Libraroom. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

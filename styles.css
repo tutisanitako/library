@@ -16,12 +16,19 @@ body {
 
 }
   
-.container {
+.logocontainer {
     display: flex;
     align-items: center;
     padding: 0 200px;
 }
 
+.section-names {
+    display: flex;
+    align-items: center;
+    padding: 0 285px;
+    font-size: medium;
+    font-weight: 600;
+}
 
 .logo img {
     height: 50px;
@@ -165,7 +172,6 @@ select, input {
 }
 
 
-
 .button:hover {
     background-color: #cac6ad;
 }
@@ -191,17 +197,132 @@ select, input {
   
 .btn-login {
     background-color: #029874;
-}
-  
-.btn-signin {
-    background-color: #455560;
+    transition: background-color 0.3s ease;
 }
 
-h2 {
-    font-size: larger;
-    font-weight: 600;
+.btn-signin {
+    background-color: #455560;
+    transition: background-color 0.3s ease; 
+}
+
+.btn-login:hover {
+    background-color: #03715b;
+}
+
+.btn-signin:hover {
+    background-color: #33414e;
+}
+
+
+
+.slideshow-container {
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #cac6ad;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #928d70;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.text-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+.books-section {
+    display: flex;
+    align-items: center;
+}
+
+.book-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
 }
   
+  
+.arrow-container {
+    display: flex;
+    align-items: center;
+}
+  
+.arrow {
+    background-color: transparent;
+    fill: #455560;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+  
+.books-container {
+    display: flex;
+    overflow: hidden;
+    width: 1500px;
+}
+  
+.books {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.book img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.book {
+    position: relative;
+}
+
+.book:hover::before {
+    content: attr(data-description);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 300px;
+    white-space: normal;
+    height: 300px;
+    padding: 10px;
+    background-color: #455560;
+    color: #f2efdb;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+.book:hover {
+    cursor: pointer;
+}
+
+
 #main-footer {
     padding: 2em;
     background: #455560;
@@ -214,19 +335,3 @@ h2 {
     text-decoration: none;
 }
   
-@media (min-width: 700px) {
-    .container {
-      display: grid;
-      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    }
-  
-    .section {
-      grid-column: 2/4;
-    }
-}
-  
-@media (max-width: 1920px) {
-    .container {
-      padding: 0 100px;
-    }
-  }
