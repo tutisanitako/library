@@ -4,35 +4,35 @@
         "author": "Hanya Yanagihara",
         "year": "2015",
         "description": "A heartbreaking story of friendship, love, and trauma.",
-        "image": "assets/books/book1.jpg"
+        "image": "assets/trending_books/book1.jpg"
     },
     {
         "title": "Eternal Echoes",
         "author": "James K. Turner",
         "year": "2022",
         "description": "An epic fantasy tale of magic, destiny, and ancient prophecies.",
-        "image": "assets/books/book2.jpg"
+        "image": "assets/trending_books/book2.jpg"
     },
     {
         "title": "Ruthless Vows",
         "author": "Rebecca Ross",
         "year": "2023",
         "description": "A compelling and suspenseful novel that explores the complex dynamics of love, betrayal, and the consequences of ruthless decisions.",
-        "image": "assets/books/book3.jpg"
+        "image": "assets/trending_books/book3.jpg"
     },
     {
         "title": "City of Illusions",
         "author": "Michael R. Harding",
         "year": "2022",
         "description": "A mind-bending thriller exploring the nature of reality.",
-        "image": "assets/books/book4.jpg"
+        "image": "assets/trending_books/book4.jpg"
     },
     {
         "title": "Iron Flame",
         "author": "Rebecca Yarros",
         "year": "2022",
         "description": "A gripping and passionate novel that explores the complexities of love and sacrifice against the backdrop of intense conflicts.",
-        "image": "assets/books/book5.jpg"
+        "image": "assets/trending_books/book5.jpg"
     }
     ,
     {
@@ -40,70 +40,70 @@
         "author": "Fiona Neill",
         "year": "2022",
         "description": "A gripping mystery set in a small coastal town with dark secrets.",
-        "image": "assets/books/book6.jpg"
+        "image": "assets/trending_books/book6.jpg"
     },
     {
         "title": "Echoes of Eternity",
         "author": "Aaron Dembski-Bedwen",
         "year": "2023",
         "description": "A time-traveling adventure that challenges the boundaries of reality.",
-        "image": "assets/books/book7.jpg"
+        "image": "assets/trending_books/book7.jpg"
     },
     {
         "title": "Serenade of Shadows",
         "author": "Olivia S. Foster",
         "year": "2022",
         "description": "A haunting tale of love and loss in a mysterious gothic setting.",
-        "image": "assets/books/book8.jpg"
+        "image": "assets/trending_books/book8.jpg"
     },
     {
         "title": "The Frozen River",
         "author": "Ariel Lawhon",
         "year": "2023",
         "description": "An enthralling historical novel that takes readers on a journey through the frozen landscapes, weaving a tale of mystery, survival, and the indomitable human spirit.",
-        "image": "assets/books/book9.jpg"
+        "image": "assets/trending_books/book9.jpg"
     },    
     {
         "title": "Whispering Pines",
         "author": "Isabella M. Simmons",
         "year": "2022",
         "description": "A heartwarming story of family, community, and second chances.",
-        "image": "assets/books/book10.jpg"
+        "image": "assets/trending_books/book10.jpg"
     },
     {
         "title": "The Harmony of the Spheres",
         "author": "Joscelyn Godwin",
         "year": "1993",
         "description": "A fascinating exploration of the history and symbolism of music, delving into the mystical and esoteric aspects of the harmonic principles that govern the universe.",
-        "image": "assets/books/book11.jpg"
+        "image": "assets/trending_books/book11.jpg"
     },
     {
         "title": "A Living Remedy",
         "author": "Nicole Chung",
         "year": "2022",
         "description": "A compelling and insightful exploration of life, healing, and resilience, as Nicole Chung shares personal stories and perspectives that offer a living remedy for the challenges we face.",
-        "image": "assets/books/book12.jpg"
+        "image": "assets/trending_books/book12.jpg"
     },
     {
         "title": "It Ends with Us",
         "author": "Colleen Hoover",
         "year": "2016",
         "description": "A powerful and emotionally charged novel that explores love, resilience, and the complexities of making difficult choices. Colleen Hoover delivers a thought-provoking story that stays with the reader long after the last page.",
-        "image": "assets/books/book13.jpg"
+        "image": "assets/trending_books/book13.jpg"
     },
     {
         "title": "Where the Crawdads Sing",
         "author": "Delia Owens",
         "year": "2018",
         "description": "A mesmerizing and lyrical novel that weaves together a coming-of-age story, a mystery, and a celebration of the natural world. Delia Owens creates a rich and atmospheric narrative that captivates readers from start to finish.",
-        "image": "assets/books/book14.jpg"
+        "image": "assets/trending_books/book14.jpg"
     },
     {
         "title": "Pond",
         "author": "Claire Louise Bennett",
         "year": "2015",
         "description": "A contemplative and immersive novel that delves into the inner world of the protagonist, exploring solitude, reflection, and the complexities of human experience. Claire Louise Bennett crafts a unique narrative that invites readers to ponder life's intricacies.",
-        "image": "assets/books/book15.jpg"
+        "image": "assets/trending_books/book15.jpg"
     }
   ]
   

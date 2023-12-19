@@ -1,0 +1,108 @@
+[
+    {
+      "name": "Shota Rustaveli",
+      "year_of_birth": 1160,
+      "country": "Georgia",
+      "books": ["The Knight in the Panther's Skin"],
+      "image": "assets/authors/author1.jpg"
+    },
+    {
+      "name": "William Shakespeare",
+      "year_of_birth": 1564,
+      "country": "England",
+      "books": ["Romeo and Juliet", "Hamlet", "Macbeth"],
+      "image": "assets/authors/author2.jpg"
+    },
+    {
+      "name": "Jane Austen",
+      "year_of_birth": 1775,
+      "country": "England",
+      "books": ["Pride and Prejudice", "Sense and Sensibility", "Emma"],
+      "image": "assets/authors/author3.jpg"
+    },
+    {
+      "name": "Leo Tolstoy",
+      "year_of_birth": 1828,
+      "country": "Russia",
+      "books": ["War and Peace", "Anna Karenina", "The Death of Ivan Ilyich"],
+      "image": "assets/authors/author4.jpg"
+    },
+    {
+      "name": "Charles Dickens",
+      "year_of_birth": 1812,
+      "country": "England",
+      "books": ["A Tale of Two Cities", "Great Expectations", "David Copperfield"],
+      "image": "assets/authors/author5.jpg"
+    },
+    {
+      "name": "Mark Twain",
+      "year_of_birth": 1835,
+      "country": "United States",
+      "books": ["Adventures of Huckleberry Finn", "The Adventures of Tom Sawyer"],
+      "image": "assets/authors/author6.jpg"
+    },
+    {
+      "name": "George Orwell",
+      "year_of_birth": 1903,
+      "country": "England",
+      "books": ["1984", "Animal Farm"],
+      "image": "assets/authors/author7.jpg"
+    },
+    {
+      "name": "J.K. Rowling",
+      "year_of_birth": 1965,
+      "country": "United Kingdom",
+      "books": ["Harry Potter series", "The Casual Vacancy"],
+      "image": "assets/authors/author8.jpg"
+    },
+    {
+      "name": "Agatha Christie",
+      "year_of_birth": 1890,
+      "country": "England",
+      "books": ["Murder on the Orient Express", "Death on the Nile", "And Then There Were None"],
+      "image": "assets/authors/author9.jpg"
+    },
+    {
+        "name": "Gabriel García Márquez",
+        "year_of_birth": 1927,
+        "country": "Colombia",
+        "notable_works": ["One Hundred Years of Solitude", "Love in the Time of Cholera"],
+        "image": "assets/authors/author10.jpg"
+    },
+    {
+        "name": "Virginia Woolf",
+        "year_of_birth": 1882,
+        "country": "England",
+        "notable_works": ["Mrs Dalloway", "To the Lighthouse", "Orlando"],
+        "image": "assets/authors/author11.jpg"
+    },
+    {
+      "name": "Emily Brontë",
+      "year_of_birth": 1818,
+      "country": "England",
+      "books": ["Wuthering Heights"],
+      "image": "assets/authors/author12.jpg"
+    },
+    {
+      "name": "Hermann Hesse",
+      "year_of_birth": 1877,
+      "country": "Germany",
+      "books": ["Siddhartha", "Steppenwolf", "The Glass Bead Game"],
+      "image": "assets/authors/author13.jpg"
+    },
+    {
+      "name": "Toni Morrison",
+      "year_of_birth": 1931,
+      "country": "United States",
+      "books": ["Beloved", "Song of Solomon"],
+      "image": "assets/authors/author14.jpg"
+    },
+    {
+      "name": "Fyodor Dostoevsky",
+      "year_of_birth": 1821,
+      "country": "Russia",
+      "books": ["Crime and Punishment", "The Brothers Karamazov"],
+      "image": "assets/authors/author15.jpg"
+    }
+  ]
+  

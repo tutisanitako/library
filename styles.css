@@ -8,9 +8,21 @@ body {
     text-align: center;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 .header {
     background-color: #efecd4;
-    padding: 15px 0;
+    padding: 1% 0;
     color: #005b46;
     border: 1px solid #dedcca;
 
@@ -40,6 +52,33 @@ body {
     display: flex;
     justify-content: left;
 }
+
+  
+.nav a:hover {
+    color: #029874;
+}
+  
+#back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #029874;
+    color: #efecd4;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 500000px;
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+  
+#back-to-top:hover {
+    background-color: #03715b;
+    
+}
+
 
 .nav ul {
     list-style: none;
@@ -132,6 +171,7 @@ body {
     margin: 0 auto;
     overflow: hidden;
 }
+
 
 .form-group {
     margin-left: 5px;
@@ -250,7 +290,7 @@ select, input {
 }
 
 
-.books-section {
+.books-section, .authors-section {
     display: flex;
     align-items: center;
 }
@@ -268,8 +308,9 @@ select, input {
     display: flex;
     align-items: center;
 }
+
   
-.arrow {
+.arrow, .arrow-author {
     background-color: transparent;
     fill: #455560;
     border: none;
@@ -277,31 +318,34 @@ select, input {
     cursor: pointer;
     margin: 0 10px;
 }
+
   
-.books-container {
+.books-container, .authors-container, .author-container {
     display: flex;
     overflow: hidden;
     width: 1500px;
+    margin: 0 auto;
 }
+
   
-.books {
+.books, .authors {
     display: flex;
     gap: 15px;
     transition: transform 0.3s ease-in-out;
 }
   
-.book img {
+.book img, .author img {
     width: 200px;
     height: 300px;
     object-fit: cover;
 }
 
 
-.book {
+.book, .author {
     position: relative;
 }
 
-.book:hover::before {
+.book:hover::before, .author:hover::before {
     content: attr(data-description);
     position: absolute;
     top: 0;
@@ -318,10 +362,28 @@ select, input {
 }
 
 
-.book:hover {
+.book:hover, .author:hover {
     cursor: pointer;
 }
 
+
+.books-latest {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.books-container-latest {
+    display: flex;
+    overflow: hidden;
+    width: 1500px;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
 #main-footer {
     padding: 2em;
