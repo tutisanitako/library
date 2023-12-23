@@ -8,18 +8,6 @@ body {
     text-align: center;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-  
-::-webkit-scrollbar-thumb {
-    background: #888; 
-}
-  
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
-
 .header {
     background-color: #efecd4;
     padding: 1% 0;
@@ -76,6 +64,7 @@ body {
   
 #back-to-top:hover {
     background-color: #03715b;
+    
 }
 
 
@@ -181,11 +170,6 @@ body {
     color: #455560;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
 select, input {
     padding: 8px;
@@ -252,151 +236,96 @@ select, input {
     background-color: #33414e;
 }
 
-
-
-.slideshow-container {
-    padding: 20px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #cac6ad;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #928d70;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.text-container {
-    max-width: 900px;
-    margin: auto;
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-
-.books-section, .authors-section {
+.login-container {
+    margin-top: 50px;
     display: flex;
-    align-items: center;
-}
-
-.authors-section {
-    margin-bottom: 70px;
-}
-
-.book-container {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    max-width: 1500px;
-    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+    color: #455560;
 }
-  
-  
-.arrow-container {
+
+.login-container h1 {
+    font-weight: 600;
+    margin-left: 35px;
+}
+
+.form-container {
+    width: 800px;
+    padding: 0 200px;
+    background-color: none;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #455560;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.custom-checkbox {
+    margin-top: 5px;
     display: flex;
     align-items: center;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-  
-.arrow, .arrow-author {
-    background-color: transparent;
-    fill: #455560;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-  
-.books-container, .authors-container, .author-container {
-    display: flex;
-    overflow: hidden;
-    width: 1500px;
-    margin: 0 auto;
-}
-
-  
-.books, .authors {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.3s ease-in-out;
-}
-  
-.book img, .author img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
+.custom-checkbox label {
+    margin-top: 5px;
 }
 
 
-.book, .author {
+.btn-login1 {
+    background-color: #029874;
+    color: #efecd4;
     position: relative;
+    left: -8px;
+    width: 98.5%;
+    height: 33px;
+    border: none;
+    transition: background-color 0.3s ease;
+
 }
 
-.book:hover::before, .author:hover::before {
-    content: attr(data-description);
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 300px;
-    white-space: normal;
-    height: 300px;
-    padding: 10px;
-    background-color: #455560;
-    color: #f2efdb;
-    box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 1;
+#login-btn-container {
+    width: 100%;
 }
-
-
-.book:hover, .author:hover {
+  
+.btn-login1:hover {
+    background-color: #03715b;
     cursor: pointer;
 }
 
 
-.books-latest {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.books-container-latest {
-    display: flex;
-    overflow: hidden;
-    width: 1500px;
-}
-
-.sections {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-#main-footer {
-    padding: 2em;
-    background: #455560;
-    color: #f2efdb;
-    text-align: center;
-}
-  
-#main-footer a {
-    color: #2690d4;
+.forget-link,
+.small-xl a {
+    color: #029874;
     text-decoration: none;
 }
-  
+
+.forget-link:hover,
+.small-xl a:hover {
+    color: #03715b;
+}
+
+.small-xl {
+    font-size: 14px;
+}
+
+.text-muted {
+    color: #6c757d;
+}

@@ -4,50 +4,100 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login - Libraroom</title>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login.css" />
   </head>
 
   <body>
     <header class="header">
-      <div class="container">
+      <div class="logocontainer">
         <div class="logo">
-          <a href="index.html">
-            <img src="logo.png" alt="Libraroom Logo" width="190" height="80" />
+          <a href="home.html">
+            <img
+              src="assets/logo.png"
+              alt="Libraroom Logo"
+              width="190"
+              height="80"
+            />
           </a>
         </div>
 
         <nav class="nav">
           <ul>
             <li><a href="home.html" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">Borrow</a></li>
-            <li><a href="catalog.html" class="nav-link">Catalog</a></li>
-            <li><a href="#" class="nav-link">Services</a></li>
-            <li><a href="#" class="nav-link">About us</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">
+                Catalog
+                <svg
+                  class="dropdown-icon"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9 9.707L2.646 3.354 1.354 4.646 9 12.293 16.646 4.646 15.354 3.354z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+
+              <div class="dropdown-content">
+                <a href="#">Books</a>
+                <a href="#">E-books</a>
+                <a href="#">Audiobooks</a>
+                <a href="#">Authors</a>
+              </div>
+            </li>
+            <li><a href="borrow.html" class="nav-link">Borrow</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="aboutus.html" class="nav-link">About us</a></li>
           </ul>
         </nav>
 
-        <div class="search-container">
-          <div class="search-options">
-            <select>
+        <div class="search-panel">
+          <div class="form-group">
+            <select id="sort" name="sort">
               <option value="catalog">Catalog</option>
-              <option value="calendar">Calendar</option>
-              <option value="website">Website</option>
+              <option value="title">Title</option>
+              <option value="year">Year</option>
+              <option value="author">Author</option>
             </select>
           </div>
-          <input type="text" id="search-bar" placeholder="Search..." />
-          <button id="search-btn">Search</button>
+
+          <div class="line"></div>
+
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Search..."
+          />
+
+          <button class="button" onclick="searchBooks()">
+            <div class="search-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+                <path d="M0 0h24v24H0z" fill="none" />
+              </svg>
+            </div>
+          </button>
         </div>
 
         <div class="buttons">
-          <!-- <a href="login.html" class="btn btn-primary">Login</a> -->
-          <a href="signup.html" class="btn btn-warning">Sign-up</a>
+          <a href="login.html" class="btn btn-login">Login</a>
+          <a href="signup.html" class="btn btn-signin">Sign-up</a>
         </div>
       </div>
     </header>
 
     <div class="login-container">
-      <h1 class="text-center">Login</h1>
       <div class="form-container">
         <form id="submitForm" action="/login" method="post">
           <input
@@ -55,212 +105,60 @@
             name="_csrf"
             value="7635eb83-1f95-4b32-8788-abec2724a9a4"
           />
-          <div class="form-group required">
-            <label for="username">Username / Email</label>
-            <input
-              type="text"
-              class="form-control text-lowercase"
-              id="username"
-              required
-              name="username"
-              value=""
-            />
-          </div>
-          <div class="form-group required">
-            <label class="d-flex flex-row align-items-center" for="password"
-              >Password
-              <a class="ml-auto border-link small-xl" href="/forget-password"
-                >Forget?</a
-              ></label
-            >
-            <input
-              type="password"
-              class="form-control"
-              required
-              id="password"
-              name="password"
-              value=""
-            />
-          </div>
-          <div class="form-group mt-4 mb-4">
-            <div class="custom-control custom-checkbox">
+          <h1 class="text-center">Login</h1>
+          <div class="form-group mt-4 mb-4 flex-container">
+            <div class="form-group required flex-item">
+              <label for="username">Username / Email</label>
               <input
-                type="checkbox"
-                class="custom-control-input"
-                id="remember-me"
-                name="remember-me"
+                type="text"
+                class="form-control text-lowercase"
+                id="username"
+                required
+                name="username"
+                value=""
               />
-              <label class="custom-control-label" for="remember-me"
-                >Remember me?</label
-              >
             </div>
-          </div>
-          <div class="form-group pt-1">
-            <button class="btn btn-primary btn-block" type="submit">
-              Log In
-            </button>
+            <div class="form-group required flex-item">
+              <label class="d-flex flex-row align-items-center" for="password"
+                >Password
+                <a class="ml-auto forget-link small-xl" href="/forget-password"
+                  >Forget?</a
+                ></label
+              >
+              <input
+                type="password"
+                class="form-control"
+                required
+                id="password"
+                name="password"
+                value=""
+              />
+              <div class="form-group mt-4 mb-4">
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="remember-me"
+                    name="remember-me"
+                    checked="checked"
+                  />
+                  <span class="checkmark"></span>
+                  <label class="custom-control-label" for="remember-me">Remember me?</label>
+                </div>
+              </div>
+              <div class="form-group pt-1 flex-item">
+                <button class="btn btn-login1 btn-block" type="submit">
+                  Log In
+                </button>
+              </div>
+            </div>
           </div>
         </form>
         <p class="small-xl pt-3 text-center">
           <span class="text-muted">Not a member?</span>
-          <a href="/signup">Sign up</a>
+          <a href="signup.html">Sign up</a>
         </p>
       </div>
     </div>
-
-    <!-- Custom CSS -->
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #333;
-        color: #fff;
-        font-size: 1.1em;
-        line-height: 1.5;
-        text-align: center;
-      }
-
-      .header {
-        background-color: #343a40;
-        padding: 15px 0;
-        color: white;
-      }
-
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .logo img {
-        width: 190px;
-        height: 80px;
-        object-fit: contain;
-      }
-
-      .nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-      }
-
-      .nav-link {
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-      }
-
-      .buttons .btn {
-        margin-left: 10px;
-        padding: 10px 20px;
-        border-radius: 5px;
-      }
-
-      .btn-primary {
-        background-color: #007bff;
-        color: white;
-      }
-
-      .btn-warning {
-        background-color: #ffc107;
-        color: #343a40;
-      }
-
-      .search-container {
-        display: flex;
-        align-items: center;
-        position: relative; /* Add position relative for absolute positioning */
-      }
-
-      .search-options {
-        position: absolute;
-        left: 0;
-      }
-
-      #search-bar {
-        width: 100%;
-        padding: 8px;
-        border-radius: 5px; /* Add rounded corners */
-      }
-
-      #search-btn {
-        padding: 8px 15px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px; /* Add rounded corners */
-      }
-
-      .login-container {
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: black;
-      }
-
-      .form-container {
-        width: 300px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: white;
-      }
-
-      .form-group {
-        margin-bottom: 15px;
-      }
-
-      label {
-        color: black;
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-
-      .form-control {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-      }
-
-      .custom-checkbox {
-        display: flex;
-        align-items: center;
-      }
-
-      .forget-link {
-        margin-left: auto;
-        font-size: 14px;
-        color: #007bff;
-        text-decoration: none;
-      }
-
-      .btn-primary {
-        background-color: #007bff;
-        color: white;
-      }
-
-      .btn-warning {
-        background-color: #ffc107;
-        color: #343a40;
-      }
-
-      .btn-block {
-        width: 100%;
-      }
-
-      .small-xl {
-        font-size: 14px;
-      }
-
-      .text-muted {
-        color: #6c757d;
-      }
-    </style>
   </body>
 </html>
