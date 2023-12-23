@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const booksContainer = $('.books');
 
-  $.getJSON('trending_books.json', function (booksData) {
+  $.getJSON('data/trending_books.json', function (booksData) {
       booksData.forEach(book => {
           const combinedDescription = `${book.title} by ${book.author}. Year: ${book.year}; ${book.description}`;
           const bookElement = `
@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   const latestBooksContainer = $('.books-latest');
 
-  $.getJSON('latest_books.json', function (latestBooksData) {
+  $.getJSON('data/latest_books.json', function (latestBooksData) {
       latestBooksData.forEach(book => {
           const combinedDescription = `${book.title} by ${book.author}. Rating: ${book.rating}; ${book.description}`;
           const bookElement = `
@@ -74,7 +74,7 @@ $(document).ready(function () {
   function loadAuthorsData() {
       const authorsContainer = $('.authors');
 
-      $.getJSON('authors.json', function (authorsData) {
+      $.getJSON('data/authors.json', function (authorsData) {
           authorsData.forEach(author => {
               const combinedDescription = `${author.name}, ${author.country}. Books: ${author.books}`;
               const authorElement = `
