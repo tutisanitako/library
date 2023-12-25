@@ -358,3 +358,47 @@ label {
     margin-top: 5px;
 }
 
+@media screen and (min-width: 1700px) and (max-width: 1880px) {
+    .logocontainer {
+        padding: 0 170px;
+    }
+
+    .nav ul {
+        gap: 25px;
+        padding-left: 0;
+    }
+
+    .search-panel {
+        width: 350px;
+    }
+
+    #search {
+        width: 160px;
+    }
+
+}
+
+@media screen and (min-width: 1490px) and (max-width: 1700px) {
+    body {
+        font-size: 0.9em;
+
+    }
+
+    .logocontainer {
+        padding: 0 110px;
+    }
+
+    .nav ul {
+        gap: 27px;
+        padding-left: 0;
+    }
+
+    .search-panel {
+        width: 300px;
+    }
+
+    #search {
+        width: 120px;
+    }
+
+}

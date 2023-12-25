@@ -8,6 +8,18 @@ body {
     text-align: center;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 .header {
     background-color: #efecd4;
     padding: 1% 0;
@@ -15,19 +27,12 @@ body {
     border: 1px solid #dedcca;
 
 }
-  
+
 .logocontainer {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 200px;
-}
-
-.section-names {
-    display: flex;
-    align-items: center;
-    padding: 0 285px;
-    font-size: medium;
-    font-weight: 600;
 }
 
 .logo img {
@@ -36,7 +41,7 @@ body {
 }
 
 .nav {
-    width: 600px;
+    max-width: 600px;
     display: flex;
     justify-content: left;
 }
@@ -59,19 +64,19 @@ body {
     display: none;
     cursor: pointer;
     font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 6px 6px 4px;
 }
 
   
 #back-to-top:hover {
     background-color: #03715b;
-    
 }
 
 
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 40px;
     font-weight: 500;
 }
 
@@ -98,7 +103,7 @@ body {
     position: absolute;
     background-color: #f2efdb;
     min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.4) 6px 6px 4px;
     z-index: 1;
     top: 100%;
     left: 50%;
@@ -156,7 +161,7 @@ body {
     height: 40px;
     border: 1px solid #cac6ad;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0 15px 0 40px;
     overflow: hidden;
 }
 
@@ -328,4 +333,49 @@ label {
 
 .text-muted {
     color: #6c757d;
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1880px) {
+    .logocontainer {
+        padding: 0 170px;
+    }
+
+    .nav ul {
+        gap: 25px;
+        padding-left: 0;
+    }
+
+    .search-panel {
+        width: 350px;
+    }
+
+    #search {
+        width: 160px;
+    }
+
+}
+
+@media screen and (min-width: 1490px) and (max-width: 1700px) {
+    body {
+        font-size: 0.9em;
+
+    }
+
+    .logocontainer {
+        padding: 0 110px;
+    }
+
+    .nav ul {
+        gap: 27px;
+        padding-left: 0;
+    }
+
+    .search-panel {
+        width: 300px;
+    }
+
+    #search {
+        width: 120px;
+    }
+
 }
