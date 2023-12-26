@@ -111,6 +111,42 @@ $(document).ready(function () {
 
   loadAuthorsData();
 
+
+  const romanceBooksContainer = $('.books-romance');
+
+  $.getJSON('data/trending_books.json', function (romanceBooksData) {
+    romanceBooksData.forEach(book => {
+      const combinedDescription = `${book.title} by ${book.author}. Year: ${book.year}; ${book.description}`;
+      const bookElement = `
+        <div class="book" data-description="${combinedDescription}" data-title="${book.title}" data-author="${book.author}" data-year="${book.year}">
+          <img src="${book.image}" alt="${book.title}" width="120" height="180" />
+        </div>
+      `;
+      romanceBooksContainer.append(bookElement);
+    });
+  });
+
+  let currentTranslateRomance = 0;
+  const scrollStepRomance = 600;
+
+  function scrollRomanceBooks(direction) {
+    const containerWidthRomance = $('.books-container-romance').width();
+    currentTranslateRomance += direction * scrollStepRomance;
+    currentTranslateRomance = Math.max(
+      Math.min(currentTranslateRomance, 0),
+      -(romanceBooksContainer.width() - containerWidthRomance)
+    );
+    romanceBooksContainer.css('transform', `translateX(${currentTranslateRomance}px)`);
+  }
+
+  $('.left-arrow-romance').on('click', function () {
+    scrollRomanceBooks(-1);
+  });
+
+  $('.right-arrow-romance').on('click', function () {
+    scrollRomanceBooks(1);
+  });
+
   function showSlides() {
       let i;
       const slides = document.getElementsByClassName("mySlides");
@@ -177,5 +213,20 @@ $(document).ready(function () {
         setTimeout(function () {
             successMessage.style.display = 'none';
         }, 3000);
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var signUpForm = document.getElementById('submitForm');
+        var successMessage = document.getElementById('successMessage');
+    
+        signUpForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+                    
+            successMessage.style.display = 'block';
+    
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
     });
 });

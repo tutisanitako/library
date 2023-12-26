@@ -257,6 +257,8 @@ select, input {
 }
 
 .icon-wrapper {
+    text-decoration: none;
+    color: #455560;
     display: inline-block;
     transition: transform 0.3s ease-in-out;
 }

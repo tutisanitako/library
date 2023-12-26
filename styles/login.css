@@ -335,6 +335,8 @@ label {
     color: #6c757d;
 }
 
+
+
 @media screen and (min-width: 1700px) and (max-width: 1880px) {
     .logocontainer {
         padding: 0 170px;
