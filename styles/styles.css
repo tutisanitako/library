@@ -530,7 +530,7 @@ select, input {
     width: 100%;
     text-align: left;
     color: #efecd4;
-    background-image: url(assets/carousel/bg.png);
+    background-image: url(../assets/carousel/bg.png);
     background-size: 900px;
     background-repeat: no-repeat;
     /* text-shadow: 0 0 5px #000, 0 0 70px #000, 0 0 10px #000, 0 0 15px #455560;   */

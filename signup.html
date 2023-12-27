@@ -112,7 +112,7 @@
               <input
                 type="text"
                 class="form-control text-lowercase"
-                id="username"
+                id="firstname"
                 required
                 name="username"
                 value=""
@@ -123,7 +123,7 @@
               <input
                 type="text"
                 class="form-control text-lowercase"
-                id="username"
+                id="lastname"
                 required
                 name="username"
                 value=""
@@ -145,7 +145,7 @@
               <input
                 type="text"
                 class="form-control text-lowercase"
-                id="username"
+                id="email"
                 required
                 name="username"
                 value=""
@@ -192,23 +192,15 @@
           <a href="login.html">Log in</a>
         </p>
       </div>
-      <div id="successMessage" class="success-message">User signed up succesfully</div>
+      <div id="passwordError" class="error-message"></div>
+
+      <div id="successMessage" class="success-message">
+        User signed up succesfully
+      </div>
     </div>
+    <script src="signup.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var signUpForm = document.getElementById('submitForm');
-            var successMessage = document.getElementById('successMessage');
-        
-            signUpForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                        
-                successMessage.style.display = 'block';
-        
-                setTimeout(function () {
-                    successMessage.style.display = 'none';
-                }, 3000);
-            });
-        });
-        </script>
+      
+    </script>
   </body>
 </html>

@@ -201,32 +201,5 @@ $(document).ready(function () {
       $('html, body').animate({ scrollTop: 0 }, 'slow');
       return false;
   });
-
-  var signUpForm = document.getElementById('submitForm');
-    var successMessage = document.getElementById('successMessage');
-
-    signUpForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        successMessage.style.display = 'block';
-
-        setTimeout(function () {
-            successMessage.style.display = 'none';
-        }, 3000);
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var signUpForm = document.getElementById('submitForm');
-        var successMessage = document.getElementById('successMessage');
-    
-        signUpForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-                    
-            successMessage.style.display = 'block';
-    
-            setTimeout(function () {
-                successMessage.style.display = 'none';
-            }, 3000);
-        });
-    });
+  
 });
